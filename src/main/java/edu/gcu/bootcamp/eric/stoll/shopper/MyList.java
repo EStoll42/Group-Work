@@ -20,9 +20,17 @@ public abstract class MyList {
 	 */
 	
 	public void addItem() {
-		System.out.println("Add an item: ");
-		String item = scanner.nextLine();
-		myList.add(item);
+		String answer; 
+		do {
+			System.out.println("Add an item: ");
+			String item = scanner.nextLine();
+			myList.add(item);
+			System.out.println("Would you like to add more items, enter YES or NO? ");
+			answer = scanner.nextLine().toUpperCase();
+			
+		}while(answer.equals("YES"));
+		
+		
 	}
 	/*
 	 * after checking for item in list this method adds it to list
@@ -48,9 +56,10 @@ public abstract class MyList {
 		// if else does the work for checking item
 		if(hasItem == true) {
 			System.out.println("Item is already on list.");
-			
+		// add else statement to add item on list if not already there
 		}else {
 			addItem(searchItem);
+			System.out.println(searchItem + " is not on the list. It will be added.");
 		}
 	}
 	/*
@@ -63,6 +72,15 @@ public abstract class MyList {
 		for(String item : myList) {	
 			System.out.println(item);
 			}	
+	}
+	/**
+	 * create method to get user input name 
+	 * @return string variable value of user input 
+	 */
+	public String userName() {
+		System.out.println("Enter your name: ");
+		String name = scanner.nextLine();
+		return name;
 	}
 	
 	public MyList() {
