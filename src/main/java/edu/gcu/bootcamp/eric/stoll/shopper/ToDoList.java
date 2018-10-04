@@ -40,7 +40,7 @@ public class ToDoList extends MyList {
 	 * After done adding items to the list this displays them for your viewing
 	 */
 	public void displayExitScreen() {
-		System.out.println("SHOPPING LIST\n");
+		System.out.println("TO DO LIST\n");
 		for(String item : myList) {	
 		System.out.println(item);
 		}
