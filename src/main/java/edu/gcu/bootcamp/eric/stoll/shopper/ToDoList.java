@@ -2,11 +2,14 @@ package edu.gcu.bootcamp.eric.stoll.shopper;
 
 import java.util.Scanner;
 
-public class GroceryList extends MyList {
-	
+public class ToDoList extends MyList {
 	Scanner scanner = new Scanner(System.in);
 	/*
 	 * if else statement decides where to go to run each method
+	 */
+	/**
+	 * create method to display the action menu for the list
+	 * create if else statements to allow options to be inputed by user and print out an action
 	 */
 	public void actionMenu(int option) {
 
@@ -20,7 +23,7 @@ public class GroceryList extends MyList {
 		}else if
 			(option == 3) {
 			this.checkItemOnList();
-
+	
 		}else if
 			(option == 4) {
 			this.sortItems();
@@ -43,4 +46,5 @@ public class GroceryList extends MyList {
 		}
 	}
 	
+
 }
