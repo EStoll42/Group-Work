@@ -16,7 +16,7 @@ public class Shopper {
 	 * create method to choose a list type 
 	 */
 	public void chooseListType() {
-		System.out.println("Would you like to make a To Dd list (enter TODO)? Grocery list (enter GROCERY)?, or "
+		System.out.println("Would you like to make a To Do list (enter TODO)? Grocery list (enter GROCERY)?, or "
 				+ " Bucket List (enter BUCKET): ");
 		String choice = scanner.nextLine().toUpperCase();
 		if (choice.equals("TODO")) {
