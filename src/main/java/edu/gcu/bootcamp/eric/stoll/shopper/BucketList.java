@@ -2,11 +2,13 @@ package edu.gcu.bootcamp.eric.stoll.shopper;
 
 import java.util.Scanner;
 
-public class GroceryList extends MyList {
-	
+public class BucketList extends MyList{
+
 	Scanner scanner = new Scanner(System.in);
-	/*
-	 * if else statement decides where to go to run each method
+	
+	/**
+	 * create method to display the action menu for the list
+	 * create if else statements to allow options to be inputed by user and print out an action
 	 */
 	public void actionMenu(int option) {
 
@@ -22,7 +24,6 @@ public class GroceryList extends MyList {
 				break;
 			case 9 : this.displayExitScreen();
 				break;
-	
 			default :
 				// If any other number or key is pressed this prints
 				System.out.println("Wrong Entry");
@@ -32,10 +33,11 @@ public class GroceryList extends MyList {
 	 * After done adding items to the list this displays them for your viewing
 	 */
 	public void displayExitScreen() {
-		System.out.println("SHOPPING LIST\n");
+		System.out.println("BUCKET LIST\n");
 		for(String item : myList) {	
 		System.out.println(item);
 		}
 	}
+	
 	
 }
