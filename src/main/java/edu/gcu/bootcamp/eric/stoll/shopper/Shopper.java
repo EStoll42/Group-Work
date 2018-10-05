@@ -16,14 +16,17 @@ public class Shopper {
 	 * create method to choose a list type 
 	 */
 	public void chooseListType() {
-		System.out.println("Would you like to make a to do list (enter TODO)? or Grocery list "
-				+ "(enter GROCERY)");
+		System.out.println("Would you like to make a To Dd list (enter TODO)? Grocery list (enter GROCERY)?, or "
+				+ " Bucket List (enter BUCKET): ");
 		String choice = scanner.nextLine().toUpperCase();
 		if (choice.equals("TODO")) {
 			displayToDoList();
 		}
-		else {
+		else if (choice.equals("GROCERY")){
 			displayGroceryList();
+		}
+		else if (choice.equals("BUCKET")){
+			displayBucketList();
 		}
 		
 		
@@ -57,6 +60,13 @@ public class Shopper {
 
 		} while (option != 9);
 	}
+	
+	/**
+	 * Displays To Do list for user to choose options
+	 * create instance of To Do list class 
+	 * set string variable and call user name method from my To Do list class
+	 * add to To Do list to personalize
+	 */
 	public static void displayToDoList() {
 		GroceryList list = new GroceryList();
 		ToDoList list2 = new ToDoList();
@@ -81,4 +91,34 @@ public class Shopper {
 
 		} while (option != 9);
 	}
+	/**
+	 * Displays Bucket list for user to choose options
+	 * create instance of bucket list class 
+	 * set string variable and call user name method from my bucket list class
+	 * add to bucket list to personalize
+	 */
+	public static void displayBucketList() {
+		GroceryList list = new GroceryList();
+		BucketList list2 = new BucketList();
+		String name = list.userName();
+		int option;
+
+		do {
+			System.out.println("=======================================");
+			System.out.println("       Bucket List for " + name);
+			System.out.println("=======================================");
+			System.out.println("Pick an option: ");
+			System.out.println("-----------------------");
+			System.out.println(" 1: : Add Task");
+			System.out.println(" 2: : Remove Task");
+			System.out.println(" 3: : Check Task on List");
+			System.out.println(" 4: : Sort Task");
+			System.out.println("------------------------");
+			System.out.println(" 9: : Exit");
+
+			option = scanner.nextInt();
+			list2.actionMenu(option);
+
+		} while (option != 9);
 	}
+}

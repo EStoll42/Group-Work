@@ -13,28 +13,22 @@ public class ToDoList extends MyList {
 	 */
 	public void actionMenu(int option) {
 
-		if (option == 1) {
-			this.addItem();
-
-		}else if
-			(option == 2) {
-			this.removeItem();
-			
-		}else if
-			(option == 3) {
-			this.checkItemOnList();
-	
-		}else if
-			(option == 4) {
-			this.sortItems();
-			
-		}else if
-			(option == 9) {
-			this.displayExitScreen();
-
-		}else
-			// If any other number or key is pressed this prints
-			System.out.println("Wrong Entry");
+		switch(option) {
+		
+			case 1 : this.addItem();
+				break;
+			case 2 : this.removeItem();
+				break;
+			case 3 : this.checkItemOnList();
+				break;
+			case 4 : this.sortItems();
+				break;
+			case 9 : this.displayExitScreen();
+				break;
+			default :
+				// If any other number or key is pressed this prints
+				System.out.println("Wrong Entry");
+		}
 	}
 	/*
 	 * After done adding items to the list this displays them for your viewing

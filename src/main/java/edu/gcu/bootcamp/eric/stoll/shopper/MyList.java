@@ -20,16 +20,17 @@ public abstract class MyList {
 	 */
 	
 	public void addItem() {
-		String answer; 
-		do {
-			System.out.println("Add an item: ");
-			String item = scanner.nextLine();
-			myList.add(item);
-			System.out.println("Would you like to add more items, enter YES or NO? ");
-			answer = scanner.nextLine().toUpperCase();
-			
-		}while(answer.equals("YES"));
+	//	String answer; 
+		String item = null;
+		System.out.println("Enter multiple items, enter exit to exit:");
+		System.out.println("Add an item: ");
+		item = scanner.nextLine();
 		
+		while(!"exit".equals(item)){
+			myList.add(item);
+			item = scanner.nextLine();
+		
+		};
 		
 	}
 	/*
