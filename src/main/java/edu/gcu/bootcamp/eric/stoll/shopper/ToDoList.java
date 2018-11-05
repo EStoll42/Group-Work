@@ -39,6 +39,4 @@ public class ToDoList extends MyList {
 		System.out.println(item);
 		}
 	}
-	
-
 }
