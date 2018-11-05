@@ -83,8 +83,4 @@ public abstract class MyList {
 		String name = scanner.nextLine();
 		return name;
 	}
-	
-	public MyList() {
-		
-	}
 }
